@@ -1,71 +1,66 @@
 programa
 {
-	
+	inclua biblioteca Matematica --> mat
 	funcao inicio()
-	{
-		inteiro numeroCandidato = 1
-		inteiro contador = 0, opcao
-		 
-		faca {
-			escreva("Digite 1 para somar ao contador ou 0 para:")
-			leia(opcao)
-				
-			escreva("Digite o numero do candidato: ")
-			leia(numeroCandidato)
+	{	
+	
+		cadeia candidato1 = "Ramom"
+		cadeia candidato2 = "Alexandre"
+		cadeia candidato3 = "Roger"
+		inteiro voto 
+		inteiro contagemC1 = 0
+		inteiro contagemC2 = 0
+		inteiro contagemC3 = 0
+		inteiro contagemNulo = 0
+		inteiro contagemBranco = 0
+		
+		 escreva("digite um numero")
+		 leia(voto)
+						
+		 enquanto(voto !=0) {
 		
 		
-		escolha(numeroCandidato) {
-			caso 1:
-				escreva("Candidato 1 recebeu um voto")
-			pare
-			
-			caso 2:
-				escreva("Candidato 2 recebeu um voto")
-			pare	
-
-			caso 3:
-				escreva("Candidato 3 recebeu um voto")
-
-		escolha(opcao) { 
-			caso 5:
-				contador++
-			pare
-				
-			caso 6:
-				escreva("Voto branco")
-			pare
-
-			caso 7:
-				escreva("Voto nulo")
-			pare
-			
-			caso 0:
-				escreva("encerrar votacao")
-			pare	
-
-			caso 9:
-			escreva("Nenhum candidato foi votado")	
-			}
-			
-				
-		caso contrario:
-
-		} enquanto (opcao != 0)
+				 escolha(voto) {
+					caso 1:
+					contagemC1++
+					escreva("Você votou no candidato",candidato1)
+					pare
+					
+					caso 2:
+					contagemC2++
+					escreva("Você votou no candidato",candidato2)
+					pare	
 		
-			} ("Valor contador: ")
-											
-			
-		}
-	}
- 
-}
-
+					caso 3:
+					contagemC3++
+					escreva("Você votou no candidato",candidato3)
+					pare
+						
+					caso 5:
+					contagemNulo++
+					escreva("Voto Nulo")
+					pare
+		
+					caso 8:
+					contagemBranco++
+					escreva("Voto Branco")
+					pare	
+		
+					caso contrario:
+					escreva("invalido, vote")
+					
+					
+					
+   }							
+  }	
+ }
+} 
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 837; 
+ * @POSICAO-CURSOR = 739; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
