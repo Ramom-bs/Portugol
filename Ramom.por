@@ -11,60 +11,67 @@ programa
 		inteiro contagemC1 = 1
 		inteiro contagemC2 = 2
 		inteiro contagemC3 = 3
-		inteiro contagemNulo = 0
-		inteiro contagemBranco = 9
+		inteiro contagemBranco = 5
+		inteiro contagemNulo = 8
 						
-		faca{
-		 	
-		 	 escreva("informe o numero de votos:")
-		 	 leia(voto)
-		 	 "numero de votos"<=0
-		 
-		 	escreva("O voto é":,voto)
-		 
+		faca
+		{
+		 	limpa()
+			
+			se (opcaoInvalida) {
+				escreva("** Opção inválida! \n\n")
+				opcaoInvalida = falso
+			
+			
+			escreva("** Opções de voto: \n\n")
+			escreva("1 | ", candidato1, "\n")
+			escreva("2 | ", candidato2, "\n")
+			escreva("3 | ", candidato3, "\n")
+			escreva("5 | Voto em branco \n")
+			escreva("8 | Voto nulo \n")
+	
+			escreva("Digite código do seu voto: ")
+			leia(codigoVoto)
 		
-				escolha(voto) {
+			escolha(voto)
+			{
 				 	
+			caso 0:
+					pare
 				caso 1:
-				contagemC1++
-				escreva("Você votou no candidato",candidato1)
-				pare
-					
+					votosCandidato1++
+					votosTotais++
+					pare
 				caso 2:
-				contagemC2++
-				escreva("Você votou no candidato",candidato2)
-				pare	
-		
+					votosCandidato2++
+					votosTotais++
+					pare
 				caso 3:
-				contagemC3++
-				escreva("Você votou no candidato",candidato3)
-				pare
-						
+					votosCandidato3++
+					votosTotais++
+					pare
 				caso 5:
-				contagemNulo++
-				escreva("Voto Nulo")
-				pare
-		
+					votosBranco++
+					votosTotais++
+					pare
 				caso 8:
-				contagemBranco++
-				escreva("Voto Branco")
-				pare	
-		
+					votosNulo++
+					votosTotais++
+					pare
 				caso contrario:
-				escreva("invalido, vote")
-					
-					
-					
-   }							
-  }	
+					opcaoInvalida = verdadeiro
+							
+}						
  }
-} 
+  }
+   }
+    }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 839; 
+ * @POSICAO-CURSOR = 652; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
